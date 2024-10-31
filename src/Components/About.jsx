@@ -1,5 +1,6 @@
 import React from 'react'
-import image from "../Images/Background.jpg"
+import imageTexture from '../Images/Background_texture.webp'
+
 const ImageAltText="White Texture background";
 const descripption="I'm a ui/ux student at some place and studying under some unviversity etc... etc..";
 const skillsset=[
@@ -15,12 +16,12 @@ const detailorQuote="I am passionate in solving problems in new creative ways by
 const About = () =>{
   return(
     <section className="padding" id="about">
-      <img src={image} alt={ImageAltText} className='background'/>
+      <img src={imageTexture} alt={ImageAltText} className='background' id='texture'/>
       <div
       style={{
         background:"white",
         width:"50%",
-        padding:"4rem",
+        padding:"1rem",
         margin:"3rem auto",
         textAlign:"center",
       }}
@@ -28,6 +29,7 @@ const About = () =>{
         <h2>About Myself</h2>
         <p className="large">{descripption}</p>
         <hr />
+
         <ul
         style={{
           textAlign:"left",
@@ -35,7 +37,7 @@ const About = () =>{
           fontSize:"1.25rem",
           margin:"2rem 3rem",
           gap:"3rem",
-        }}
+        }} className='overlay-text'
         >
           {skillsset.map((skills)=>(
             <li key={skills}>{skills}</li>
@@ -44,6 +46,7 @@ const About = () =>{
         <hr />
         <p style={{padding:"1rem 3 rem 0",}}>{detailorQuote}</p>
       </div>
+
     </section>
   );
 };

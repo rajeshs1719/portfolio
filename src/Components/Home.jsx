@@ -1,20 +1,21 @@
 import React from 'react';
-import ladyImg from '../Images/Lady.avif';
+// import ladyImg from '../Images/Lady.avif';
+import ManImg from '../Images/Man.avif';
 // import PropTypes from "prop-types";
 const imageAltTxtF="Lady Professional Image";
 const Home=({name,title})=> {
   return (
     <div>
       <section id="home" className="min-height">
-        <img src={ladyImg} alt={imageAltTxtF} className="background" />
+        {/* <img src={ladyImg} alt={imageAltTxtF} className="background" /> */}
+        <img src={ManImg} alt={imageAltTxtF} className="background" />
         <div 
         style={{
             position:"absolute",
             top:"5rem",
             left:"2rem",
             width:"17rem"
-        }}
-        >
+        }} className='name-title'>
             <h1>{name}</h1>
             <h2>{title}</h2>
         </div>
