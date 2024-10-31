@@ -26,7 +26,8 @@ const App=()=> {
       <Home name={siteProps.name} title={siteProps.title}/>
       <About/>
       <Portfolio/>
-      {/* <Footer {...siteProps}/> */}
+      <Footer {...siteProps} />
+
     </div>
   );
 };
